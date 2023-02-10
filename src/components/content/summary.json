@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_summaries",
+  "info": {
+    "displayName": "summary",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

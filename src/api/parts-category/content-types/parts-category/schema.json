@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parts_categories",
+  "info": {
+    "singularName": "parts-category",
+    "pluralName": "parts-categories",
+    "displayName": "Категория Запасных частей",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "content": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "custom__meta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "metadata.metadata",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "parent_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::parts-category.parts-category",
+      "inversedBy": "child_categories"
+    },
+    "child_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parts-category.parts-category",
+      "mappedBy": "parent_category"
+    },
+    "parts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::part.part",
+      "mappedBy": "parts_category"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_content_base_specs",
+  "info": {
+    "displayName": "BaseSpec",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "wheelType": {
+      "type": "enumeration",
+      "enum": [
+        "w6x6",
+        "w6x4",
+        "w8x4",
+        "w8x8"
+      ]
+    },
+    "weightLoad": {
+      "type": "string"
+    },
+    "power": {
+      "type": "biginteger"
+    },
+    "platforma": {
+      "type": "text"
+    },
+    "typeOfUnload": {
+      "type": "text"
+    },
+    "year": {
+      "type": "string",
+      "required": true
+    },
+    "engine": {
+      "type": "string"
+    },
+    "Engine": {
+      "type": "enumeration",
+      "enum": [
+        "ЯМЗ-236 (180 л.с)",
+        "ЯМЗ-236НЕ (230 л.с)",
+        "ЯМЗ-536",
+        "ЯМЗ-53613 (312 л. с.)",
+        "ЯМЗ-53623 (275 л. с.)",
+        "ЯМЗ-653 (420 л. с.)",
+        "ЯМЗ-65674 (230 л. с.)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "kind": "collectionType",
+  "collectionName": "truck_categories",
+  "info": {
+    "singularName": "truck-category",
+    "pluralName": "truck-categories",
+    "displayName": "Категория Грузовых автомобилей",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "content": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "order": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    },
+    "custom__meta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "metadata.metadata",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "trucks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::truck.truck",
+      "mappedBy": "category"
+    },
+    "parent_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::truck-category.truck-category",
+      "inversedBy": "child_categories"
+    },
+    "child_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::truck-category.truck-category",
+      "mappedBy": "parent_category"
+    },
+    "categoryId": {
+      "type": "customField",
+      "required": true,
+      "customField": "plugin::field-uuid.uuid"
+    }
+  }
+}

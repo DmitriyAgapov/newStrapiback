@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_content_specs",
+  "info": {
+    "displayName": "spec"
+  },
+  "options": {},
+  "attributes": {
+    "spec_title": {
+      "type": "string"
+    },
+    "spec_value": {
+      "type": "string"
+    }
+  }
+}

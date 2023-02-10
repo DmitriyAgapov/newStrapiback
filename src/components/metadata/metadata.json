@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_metadata_metadata",
+  "info": {
+    "displayName": "metadata"
+  },
+  "options": {},
+  "attributes": {
+    "descriptionText": {
+      "type": "text"
+    },
+    "metaPageTitle": {
+      "type": "text"
+    },
+    "metaKeywords": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    }
+  }
+}
