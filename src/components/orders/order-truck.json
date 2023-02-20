@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_orders_order_trucks",
+  "info": {
+    "displayName": "OrderTruck",
+    "icon": "ambulance"
+  },
+  "options": {},
+  "attributes": {
+    "gruzovye_avtomobilis": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::truck.truck"
+    }
+  }
+}

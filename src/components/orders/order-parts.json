@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_orders_order_parts",
+  "info": {
+    "displayName": "OrderParts",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "zapchasti": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::part.part"
+    },
+    "Quanity": {
+      "type": "integer"
+    }
+  }
+}

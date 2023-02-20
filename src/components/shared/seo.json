@@ -10,18 +10,20 @@
     "metaTitle": {
       "required": true,
       "type": "string",
-      "maxLength": 60
+      "maxLength": 60,
+      "unique": false
     },
     "metaDescription": {
       "type": "string",
-      "required": true,
+      "required": false,
       "maxLength": 160,
-      "minLength": 50
+      "minLength": 30,
+      "default": " "
     },
     "metaImage": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",

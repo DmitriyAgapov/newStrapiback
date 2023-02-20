@@ -40,8 +40,7 @@
       "allowedTypes": [
         "images",
         "files",
-        "videos",
-        "audios"
+        "videos"
       ],
       "pluginOptions": {
         "i18n": {

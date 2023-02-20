@@ -4,11 +4,11 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "Order",
+    "displayName": "Заказы",
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -56,29 +56,28 @@
       },
       "type": "text"
     },
-    "zapchastis": {
+    "gruzovye_avtomobili": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::part.part"
+      "relation": "oneToOne",
+      "target": "api::truck.truck"
     },
-    "Type_of_order": {
+    "OrderParts": {
+      "type": "component",
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "enumeration",
-      "enum": [
-        "parts:Запчасти",
-        "trucks:Автомобили"
-      ],
-      "default": "parts:Запчасти",
-      "required": true
+      "component": "orders.order-parts"
     },
-    "gruzovye_avtomobili": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::truck.truck"
+    "orderpartslist": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json"
     }
   }
 }
